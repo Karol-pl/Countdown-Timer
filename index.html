@@ -5,31 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/bc303aca4d.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Timer</title>
   </head>
   <body>
-    <h1>Until new year</h1>
-    <div id="clockdiv" class="countdown-container">
-      <div class="months-container counter">
-        <p class="big-text" id="months"></p>
-        <span id="month-title" class="small-text"></span>
+    <div class="app-container">
+      <div class="settings">
+        <h2>Settings</h2>
+        <label for="event-name">Event name: </label>
+        <input type="text" id="event-name" value="New year " />
+        <label for="event-day">Event day: </label>
+        <input
+          type="number"
+          id="event-day"
+          min="1"
+          max="31"
+          maxlength="2"
+          value="1"
+        />
+        <label for="event-month">Event month: </label>
+        <input
+          type="number"
+          id="event-month"
+          min="1"
+          max="12"
+          maxlength="2"
+          value="1"
+        />
+        <label for="event-year">Event year: </label>
+        <input
+          type="number"
+          id="event-year"
+          maxlength="4"
+          minlength="4"
+          min="2021"
+          max="2024"
+          value="2022"
+        />
+        <label for="event-image">Change background image: </label>
+        <input
+          type="text"
+          id="event-image"
+          placeholder="e.g: https://unsplash.com/photos/CRoAeTh5S_I"
+        />
+        <button class="save">Save</button>
       </div>
-      <div class="days-container counter">
-        <p class="big-text" id="days"></p>
-        <span id="day-title" class="small-text"></span>
+      <div class="settings-btn">
+        <div class="settings-burger"></div>
+        <!-- <i class="fas fa-bars"></i> -->
       </div>
-      <div class="hours-container counter">
-        <p class="big-text" id="hours"></p>
-        <span id="hour-title" class="small-text"></span>
-      </div>
-      <div class="minutes-container counter">
-        <p class="big-text" id="minutes"></p>
-        <span id="minute-title" class="small-text"></span>
-      </div>
-      <div class="seconds-container counter">
-        <p class="big-text" id="seconds"></p>
-        <span id="second-title" class="small-text"></span>
+      <div class="card-container">
+        <h1><span class="event">New year </span> in:</h1>
+        <div id="clockdiv" class="countdown-container">
+          <div class="months-container counter">
+            <p class="big-text" id="months"></p>
+            <span id="month-title" class="small-text"></span>
+          </div>
+          <div class="days-container counter">
+            <p class="big-text" id="days"></p>
+            <span id="day-title" class="small-text"></span>
+          </div>
+          <div class="hours-container counter">
+            <p class="big-text" id="hours"></p>
+            <span id="hour-title" class="small-text"></span>
+          </div>
+          <div class="minutes-container counter">
+            <p class="big-text" id="minutes"></p>
+            <span id="minute-title" class="small-text"></span>
+          </div>
+          <div class="seconds-container counter">
+            <p class="big-text" id="seconds"></p>
+            <span id="second-title" class="small-text"></span>
+          </div>
+        </div>
       </div>
     </div>
   </body>
